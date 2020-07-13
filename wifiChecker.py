@@ -41,9 +41,9 @@ def have_internet():
 # If wifi goes down, diconnect then reconnect
 while True:
     cls()
-    print("Connessione OK" if have_internet() else "Nessuna connessione verso %s, \nSe vuoi scegliere una rete diversa, chiudi questa finestra\n" % (NAME))
+    print("Connessione OK" if have_internet() else "Impossibile connettersi alla rete %s, \n" % (NAME))
     if not have_internet():
-        disable()
+#       disable()
         sleep(.5)
         enable()
     sleep(FREQUENCY)
